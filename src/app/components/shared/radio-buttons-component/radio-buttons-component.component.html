@@ -1,0 +1,9 @@
+<div class="d-flex flex-row align-items-center mb-2">
+  <div class="input-caption w-50">
+    <span>{{ label }}</span>
+  </div>
+  <mat-radio-group [(ngModel)]="selectedOption"
+                    (change)="onChangeOption($event)">
+    <mat-radio-button class="ms-2" *ngFor="let option of radioOptions" [value]="option">{{ option }}</mat-radio-button>
+  </mat-radio-group>
+</div>

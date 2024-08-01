@@ -1,0 +1,24 @@
+<div class="m-3 w-100">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Mapping Definition</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <app-radio-buttons-component label="{{ 'Mapping Type:' }}"
+                                  [radioOptions]="radioOptions"
+                                  (onSelectOption)="onSelectOptionHandler($event)"></app-radio-buttons-component>
+      <app-input-form-field-component label="{{'Entity Name:'}}"
+                                      textboxPlaceholder="{{ 'Ex: sys/case' }}"
+                                      (onInputChange)="onInputChangeHandler($event)"></app-input-form-field-component>
+      <div class="d-flex mb-2">
+        <div class="w-50"></div>
+        <mat-checkbox class="w-50 ms-3" [(ngModel)]="isDynamicEntity">Is Dynamic Entity?</mat-checkbox>
+      </div>
+      <app-input-form-field-component label="{{'Dynamic Entity Name:'}}" textboxPlaceholder="{{ 'Ex: sys/navex_follow_up_question' }}"></app-input-form-field-component>
+      <app-input-form-field-component label="{{'Sheet Name:'}}" textboxPlaceholder="{{ 'Ex: Case' }}"></app-input-form-field-component>
+      <app-input-form-field-component label="{{'Client Header Col Name:'}}" textboxPlaceholder="{{ 'Ex: Client Column Header' }}"></app-input-form-field-component>
+      <app-input-form-field-component label="{{'System Fields Col Name:'}}" textboxPlaceholder="{{ 'Ex: Case IQ Field Name' }}"></app-input-form-field-component>
+      <app-choose-file-form-field-component></app-choose-file-form-field-component>
+    </mat-card-content>
+  </mat-card>
+</div>
